@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV - Daviyan Rosad</title>
+<style>
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a192f, #000814);
+    color: #e0e9f6;
+    overflow-x: hidden;
+  }
+
+  /* Background bintang */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(2px 2px at 20% 30%, #4fc3f7, transparent),
+      radial-gradient(1.5px 1.5px at 70% 60%, #90caf9, transparent),
+      radial-gradient(2px 2px at 80% 20%, #2196f3, transparent);
+    background-repeat: repeat;
+    animation: stars 200s linear infinite;
+    opacity: 0.3;
+    z-index: -1;
+  }
+  @keyframes stars {
+    from { background-position: 0 0; }
+    to { background-position: -1500px 1500px; }
+  }
+
+  .container {
+    display: flex;
+    min-height: 100vh;
+    max-width: 1100px;
+    margin: auto;
+    box-shadow: 0 0 25px rgba(79, 195, 247, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  /* Sidebar kiri */
+  .sidebar {
+    width: 32%;
+    background: rgba(10, 25, 47, 0.95);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    animation: slideInLeft 1s ease;
+  }
+  @keyframes slideInLeft {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+  }
+
+  .profile-pic {
+    width: 140px; height: 140px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #4fc3f7;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px #4fc3f7aa;
+    transition: transform 0.3s;
+  }
+  .profile-pic:hover { transform: scale(1.05); }
+  .profile-pic img { width: 100%; height: 100%; object-fit: cover; }
+
+  .sidebar h3 {
+    margin: 15px 0 8px;
+    color: #82b1ff;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #4fc3f7aa;
+    padding-bottom: 5px;
+    width: 100%;
+  }
+  .sidebar ul {
+    list-style: none;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  .sidebar ul li {
+    margin: 8px 0;
+    font-size: 0.95rem;
+    color: #cfd8dc;
+  }
+
+  /* Konten kanan */
+  .main {
+    flex: 1;
+    background: rgba(0, 8, 20, 0.85);
+    padding: 40px 30px;
+    animation: fadeIn 1.2s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .main h1 {
+    font-size: 2rem;
+    color: #64b5f6;
+    margin-bottom: 5px;
+    text-shadow: 0 0 10px #64b5f6aa;
+  }
+  .main h2 {
+    font-weight: 300;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #90caf9;
+  }
+  .main section {
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgba(79,195,247,0.3);
+  }
+  .main section h3 {
+    color: #82b1ff;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+  }
+  .main ul {
+    padding-left: 18px;
+  }
+  .main ul li {
+    margin-bottom: 8px;
+    line-height: 1.5;
+  }
+
+  footer {
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 15px;
+    color: #4fc3f7aa;
+    border-top: 1px solid rgba(79,195,247,0.3);
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { flex-direction: column; }
+    .sidebar, .main { width: 100%; }
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar kiri -->
+    <aside class="sidebar">
+      <div class="profile-pic">
+        <img src="DavianPhot.jpg" alt="Foto Profil Daviyan">
+      </div>
+
+      <h3>Data Diri</h3>
+      <ul>
+        <li><b>TTL:</b> Jakarta, 05 Maret 2006</li>
+        <li><b>Jenis Kelamin:</b> Laki-laki</li>
+        <li><b>Status:</b> Belum menikah</li>
+        <li><b>Kewarganegaraan:</b> Indonesia</li>
+      </ul>
+
+      <h3>Kontak</h3>
+      <ul>
+        <li>📞 +62 812 3868 1499</li>
+        <li>📧 davianross33@gmail.com</li>
+        <li>📍 Jl. Kiaraendah, Bojong Kulur, Kec. Gn. Putri, Bogor</li>
+      </ul>
+
+      <h3>Hobi</h3>
+      <ul>
+        <li>🎮 Bermain Game</li>
+        <li>🎧 Mendengarkan Musik</li>
+        <li>📚 Membaca</li>
+        <li>✈️ Traveling</li>
+      </ul>
+
+      <h3>Sosial Media</h3>
+      <ul>
+        <li>Instagram: @IfallenOmen_</li>
+      </ul>
+    </aside>
+
+    <!-- Konten kanan -->
+    <main class="main">
+      <h1>Daviyan Rosad Dwi Syahputra</h1>
+      <h2>Lulusan SMKS NU KEJAJAR - RPL</h2>
+
+      <section>
+        <h3>Tentang Saya</h3>
+        <p>Saya merupakan lulusan SMKS NU KEJAJAR jurusan RPL (Rekayasa Perangkat Lunak).
+           Memiliki kemampuan menggunakan Microsoft Office, Excel, dan Visual Studio Code.</p>
+      </section>
+
+      <section>
+        <h3>Pendidikan</h3>
+        <ul>
+          <li>SMKS NU KEJAJAR (2021 - 2024)</li>
+          <li>SMP Islam Al-Mabrur (2018 - 2021)</li>
+          <li>SDS Islam Ar-Ruhna (2015 - 2018)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Pengalaman Kerja</h3>
+        <ul>
+          <li>Magang 3 bulan di Dinas Sosial Wonosobo</li>
+          <li>Mendata warga penerima Bantuan Sosial</li>
+          <li>Mengelola data terpadu kesejahteraan sosial (DTKS)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Kemampuan</h3>
+        <ul>
+          <li>Bahasa Indonesia & Inggris (aktif)</li>
+          <li>HTML & CSS (basic)</li>
+          <li>Visual Studio Code (basic coding)</li>
+          <li>Microsoft Office & Excel (intermediate)</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Daviyan Rosad Dwi Syahputra
+  </footer>
+</body>
+</html>
